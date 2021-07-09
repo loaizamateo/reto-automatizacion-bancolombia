@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="verify trust benefits" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-09T13:53:37" hostname="MATEOLOAIZA" time="17.336">
+  <properties/>
+  <testcase name="search for bancolombia benefits" classname="verify trust benefits" time="17.336"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[jul. 09, 2021 8:53:37 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}) on port 21075
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+jul. 09, 2021 8:53:39 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>

@@ -1,0 +1,48 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'java-library'
+
+//compileJava.options.encoding = 'Cp1252'
+compileJava.options.encoding = 'UTF-8'
+
+apply plugin: 'net.serenity-bdd.aggregator'
+// THIS ONE
+//compileJava.options.encoding = "Cp1252"
+//compileTestJava.options.encoding = "Cp1252"
+
+repositories {
+    jcenter()
+    mavenLocal()
+}
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath('net.serenity-bdd:serenity-gradle-plugin:2.0.33')
+    }
+}
+apply plugin: 'net.serenity-bdd.aggregator'
+dependencies {
+
+    // This dependency is exported to consumers, that is to say found on their compile classpath.
+    api 'org.apache.commons:commons-math3:3.6.1'
+
+    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
+    implementation 'com.google.guava:guava:27.1-jre'
+
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+    testCompile  'io.cucumber:cucumber-junit:1.9.5'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.5'
+    compile 'net.serenity-bdd:serenity-core:2.0.33'
+    compile 'net.serenity-bdd:serenity-junit:2.0.33'
+    compile 'net.serenity-bdd:serenity-cucumber:1.9.5'
+    compile 'net.serenity-bdd:serenity-screenplay:2.0.33'
+    compile 'net.serenity-bdd:serenity-screenplay-webdriver:2.0.33'
+    compile "com.aventstack:extentreports:4.0.6"
+    compile "org.apache.poi:poi-ooxml:4.1.0"
+    compile 'org.json:json:20160810'
+    compile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '3.6.2'
+}
